@@ -13,13 +13,14 @@ scoop install 7zip curl sudo git openssh coreutils grep sed less which
 [environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
 
 # programming languages
-scoop install python ruby go nodejs oraclejdk
+scoop install python ruby go nodejs openjdk
 
 # docker
 scoop install docker docker-compose rancher-compose
 
 # dev tools
-scoop install vagrant apex sublime-text winmerge hugo
+scoop install vagrant apex sublime-text winmerge hugo glide
+pip install awscli
 
 # misc
 scoop install vlc
