@@ -13,7 +13,7 @@ scoop install 7zip curl sudo git git-lfs openssh openssl coreutils grep sed less
 [environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
 
 # programming languages
-scoop install python ruby go nodejs openjdk
+scoop install python ruby go openjdk
 
 # docker
 # scoop install docker docker-compose docker-machine
@@ -27,7 +27,7 @@ pip install awscli
 scoop install vlc
 
 # dotnet
-scoop install .net nuget
+scoop install dotnet nuget
 
 # vim
 scoop install vim
