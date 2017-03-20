@@ -15,8 +15,7 @@ scoop install 7zip curl sudo git git-lfs openssh openssl coreutils grep sed less
 # programming languages
 scoop install python ruby go openjdk
 
-# docker
-# scoop install docker docker-compose docker-machine
+# rancher
 scoop install rancher-compose
 
 # dev tools
