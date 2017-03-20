@@ -4,8 +4,8 @@ if (Get-Command scoop -errorAction SilentlyContinue)
 {
 	write-host "scoop already installed"
 } else {
-	iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 	set-executionpolicy unrestricted -s cu
+	iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 }
 
 # utils
