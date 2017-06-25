@@ -7,13 +7,14 @@ if (Get-Command scoop -errorAction SilentlyContinue)
 	set-executionpolicy unrestricted -s cu
 	iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 }
+scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 
 # utils
 scoop install 7zip curl sudo git git-lfs openssh openssl coreutils grep sed less which zip unzip tar gzip
 [environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
 
 # programming languages
-scoop install python ruby go openjdk
+scoop install python ruby go openjdk flatc protobuf
 
 # rancher
 scoop install rancher-compose
