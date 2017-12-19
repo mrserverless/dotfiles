@@ -18,11 +18,18 @@ wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.9.linux-amd64.tar.gz
 rm go1.9.linux-amd64.tar.gz
 
-# install pip
-sudo apt-get install python-pip
-pip install --upgrade pip
-
 # aws cli
-pip install awscli
+pip3 install awscli
+
+# java
+sudo apt-get -o Dpkg::Options::="--force-overwrite" install openjdk-9-jdk
+
+# dotnet
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
+
+sudo apt-get update
+sudo apt-get install dotnet-sdk-2.0.3
 
 source ~/.bashrc
