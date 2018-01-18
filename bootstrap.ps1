@@ -41,7 +41,7 @@ set expandtab
 set backupdir=$TEMP
 ' | out-file ~/.vimrc -enc oem -append
 
-# console theme
-scoop install concfg pshazz
-concfg import solarized small
+# console theme - optinal
+# scoop install concfg pshazz
+# concfg import solarized small
 
