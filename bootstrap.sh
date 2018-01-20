@@ -1,5 +1,8 @@
 sudo apt-get upgrade
 
+# utility
+sudo apt-get install node-gyp
+
 # docker
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -17,6 +20,9 @@ sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose
 wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.9.linux-amd64.tar.gz
 rm go1.9.linux-amd64.tar.gz
+
+# nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
 # aws cli
 pip3 install awscli
