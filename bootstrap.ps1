@@ -5,7 +5,7 @@ if (Get-Command scoop -errorAction SilentlyContinue)
 	write-host "scoop already installed"
 } else {
 	set-executionpolicy unrestricted -s cu
-	iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+	invoke-expression (new-object net.webclient).downloadstring('https://get.scoop.sh')
 }
 scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 
