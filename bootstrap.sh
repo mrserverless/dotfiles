@@ -8,7 +8,7 @@ sudo apt -y install node-gyp ca-certificates build-essential libssl-dev zip make
 sudo apt -y -o Dpkg::Options::="--force-overwrite" install python python-pip python3 python3-pip openjdk-9-jdk ruby
 
 # go
-curl -L https://storage.googleapis.com/golang/go1.10.linux-amd64.tar.gz | sudo tar xz -C /usr/local/
+curl -L https://storage.googleapis.com/golang/go1.10.1.linux-amd64.tar.gz | sudo tar xz -C /usr/local/
 # hugo
 curl -L https://github.com/gohugoio/hugo/releases/download/v0.34/hugo_0.34_Linux-64bit.tar.gz | sudo tar -xvz -C /usr/local/bin
 

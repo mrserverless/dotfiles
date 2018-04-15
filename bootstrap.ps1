@@ -25,6 +25,10 @@ pip install awscli
 go get -u github.com/remind101/assume-role
 go get -u github.com/golang/dep/cmd/dep
 
+# node
+nvm install latest
+npm install -g serverless
+
 # entertainment
 scoop install vlc
 
@@ -41,6 +45,6 @@ set backupdir=$TEMP
 ' | out-file ~/.vimrc -enc oem -append
 
 # console theme - optinal
-# scoop install concfg pshazz
-# concfg import solarized small
+scoop install concfg pshazz
+concfg import firefly #mountain
 
