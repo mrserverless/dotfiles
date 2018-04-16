@@ -40,4 +40,10 @@ echo "export DOCKER_HOST='tcp://0.0.0.0:2375'" >> ~/.bashrc
 sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
+# protoc
+curl -L https://github.com/google/protobuf/releases/download/v3.5.1/protoc-3.5.1-linux-x86_64.zip 
+sudo unzip /usr/local/
+sudo chmod a+x /usr/local/bin/protoc
+
 source ~/.bashrc
+curl -OL https://github.com/google/protobuf/releases/download/v3.4.0/protoc-3.4.0-linux-x86_64.zip
