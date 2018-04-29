@@ -32,8 +32,8 @@ go get -u github.com/awslabs/aws-sam-local
 sudo apt-get install apt-transport-https software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt-get update
-sudo apt-get -y install docker-ce
+sudo apt update
+sudo apt -y install docker-ce
 sudo usermod -aG docker $(whoami)
 echo "export DOCKER_HOST='tcp://0.0.0.0:2375'" >> ~/.bashrc
 
@@ -46,4 +46,10 @@ curl -L https://github.com/google/protobuf/releases/download/v3.5.1/protoc-3.5.1
 sudo unzip /usr/local/
 sudo chmod a+x /usr/local/bin/protoc
 source ~/.bashrc
-curl -OL https://github.com/google/protobuf/releases/download/v3.4.0/protoc-3.4.0-linux-x86_64.zip\
+
+# watchexec
+sudo curl h -L https://github.com/mattgreen/watchexec/releases/download/1.8.6/watchexec-1.8.6-x86_64-unknown-linux-gnu.tar.gz | sudo tar -xz -C /usr/local/bin --strip-components=1
+
+# upgrade Ubuntu OS
+# sudo -S apt-mark hold procps strace sudo
+# sudo -S env RELEASE_UPGRADER_NO_SCREEN=1 do-release-upgrade
