@@ -26,6 +26,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | b
 pip3 install awscli
 go get -u github.com/remind101/assume-role
 go get -u github.com/golang/dep/cmd/dep
+go get -u github.com/awslabs/aws-sam-local
 
 # docker
 sudo apt-get install apt-transport-https software-properties-common
@@ -37,13 +38,12 @@ sudo usermod -aG docker $(whoami)
 echo "export DOCKER_HOST='tcp://0.0.0.0:2375'" >> ~/.bashrc
 
 # docker-compose
-sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
 # protoc
 curl -L https://github.com/google/protobuf/releases/download/v3.5.1/protoc-3.5.1-linux-x86_64.zip 
 sudo unzip /usr/local/
 sudo chmod a+x /usr/local/bin/protoc
-
 source ~/.bashrc
-curl -OL https://github.com/google/protobuf/releases/download/v3.4.0/protoc-3.4.0-linux-x86_64.zip
+curl -OL https://github.com/google/protobuf/releases/download/v3.4.0/protoc-3.4.0-linux-x86_64.zip\
