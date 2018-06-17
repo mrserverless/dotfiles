@@ -2,7 +2,7 @@ sudo apt update
 sudo apt -y upgrade
 
 # utility
-sudo apt -y install ca-certificates build-essential libssl-dev zip make dos2unix curl
+sudo apt -y install ca-certificates build-essential libssl-dev zip make dos2unix curl jq
 
 # programming languages
 sudo apt -y -o Dpkg::Options::="--force-overwrite" install python python-pip python3 python3-pip openjdk-9-jdk ruby
