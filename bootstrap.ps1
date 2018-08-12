@@ -20,7 +20,7 @@ scoop install python ruby go openjdk flatc protobuf nvm dotnet nuget
 scoop install rancher-compose
 
 # dev tools
-scoop install vagrant winmerge hugo glide vscode ngrok filezilla insomnia postman
+scoop install vagrant winmerge hugo glide vscode ngrok filezilla insomnia postman terraform
 pip install awscli
 go get -u github.com/remind101/assume-role
 go get -u github.com/golang/dep/cmd/dep

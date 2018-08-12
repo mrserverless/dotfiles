@@ -22,3 +22,4 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # added by Snowflake SnowSQL installer
 export PATH=/home/yun/bin:/usr/local/go/bin:$GOPATH/bin:$PATH
+export DOCKER_HOST='tcp://0.0.0.0:2375'
