@@ -17,23 +17,27 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | b
 pip3 install awscli
 go get -u github.com/remind101/assume-role
 go get -u github.com/golang/dep/cmd/dep
-go get -u github.com/awslabs/aws-sam-local
 go get -u github.com/jmespath/go-jmespath
 
 # docker
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-sudo apt update
-sudo apt -y install docker-ce
+sudo apt update && sudo apt -y install docker-ce
 echo "export DOCKER_HOST='tcp://0.0.0.0:2375'" >> ~/.profile
-
-# jmespath
-sudo wget https://github.com/jmespath/jp/releases/download/0.1.2/jp-linux-amd64 -O /usr/local/bin/jp \
-&& sudo chmod +x /usr/local/bin/jp
 
 # docker-compose
 sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
+
+# gcloud
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt update && sudo apt install -y google-cloud-sdk
+
+# jmespath
+sudo wget https://github.com/jmespath/jp/releases/download/0.1.2/jp-linux-amd64 -O /usr/local/bin/jp \
+&& sudo chmod +x /usr/local/bin/jp
 
 # watchexec
 sudo curl -L https://github.com/mattgreen/watchexec/releases/download/1.8.6/watchexec-1.8.6-x86_64-unknown-linux-gnu.tar.gz | sudo tar -xz -C /usr/local/bin --strip-components=1
