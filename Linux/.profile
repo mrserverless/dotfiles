@@ -16,10 +16,7 @@
 #    fi
 #fi
 
-export GOPATH=/home/yun/dev/go
+export GOPATH=$HOME/dev/go
 # set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-
-# added by Snowflake SnowSQL installer
-export PATH=/home/yun/bin:/usr/local/go/bin:$GOPATH/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/go/bin:$GOPATH/bin:$PATH
 export DOCKER_HOST='tcp://0.0.0.0:2375'
