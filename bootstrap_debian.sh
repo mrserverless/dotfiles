@@ -20,6 +20,9 @@ go get -u github.com/golang/dep/cmd/dep
 go get -u github.com/awslabs/aws-sam-local
 go get -u github.com/jmespath/go-jmespath
 
+# terraform
+curl -L https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip
+
 # docker
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
