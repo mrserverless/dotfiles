@@ -29,6 +29,7 @@ pip3 install awscli
 go get -u github.com/remind101/assume-role
 go get -u github.com/golang/dep/cmd/dep
 go get -u github.com/jmespath/go-jmespath
+go get -u gopkg.in/mikefarah/yq.v2
 
 # terraform
 curl -L https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip
