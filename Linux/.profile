@@ -16,7 +16,6 @@
 #    fi
 #fi
 
-export GOPATH=$HOME/dev/go
+export GOPATH=$HOME/go
 # set PATH so it includes user's private bin directories
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/go/bin:$GOPATH/bin:$PATH
-export DOCKER_HOST='tcp://0.0.0.0:2375'
