@@ -95,3 +95,8 @@ sudo apt-get install code
 git config --global url."git@gitlab.com:".insteadOf "https://gitlab.com/"
 git config --global url."git@github.com:".insteadOf "https://github.com/"
 git config --global url."git@bitbucket.org:".insteadOf "https://bitbucket.org/"
+
+# DBeaver
+sudo add-apt-repository ppa:serge-rider/dbeaver-ce
+sudo apt-get update
+sudo apt-get install dbeaver-ce
