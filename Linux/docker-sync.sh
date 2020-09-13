@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # docker-sync
 sudo gem install docker-sync
 

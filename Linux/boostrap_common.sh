@@ -5,7 +5,7 @@ sudo apt -y upgrade
 sudo apt -y install ca-certificates build-essential libssl-dev zip make dos2unix curl jq apt-transport-https software-properties-common gnupg2 vim gparted ssh-askpass
 
 # programming languages
-sudo apt -y -o Dpkg::Options::="--force-overwrite" install python python-pip python3 python3-pip openjdk-9-jdk ruby ruby-dev
+sudo apt -y -o install python3 python3-pip openjdk-14-jdk ruby ruby-dev
 sudo apt -y -o install node-gyp
 
 # go
@@ -15,11 +15,12 @@ curl -L https://storage.googleapis.com/golang/go1.11.linux-amd64.tar.gz | sudo t
 curl -L https://github.com/gohugoio/hugo/releases/download/v0.34/hugo_0.34_Linux-64bit.tar.gz | sudo tar -xvz -C /usr/local/bin
 
 # dotnet
-wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
-sudo apt install apt-transport-https
-sudo apt update
-sudo apt install aspnetcore-runtime-2.1
+sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-3.1
 
 # nvm
 npm install -g n
