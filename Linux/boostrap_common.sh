@@ -17,15 +17,15 @@ curl -L https://github.com/gohugoio/hugo/releases/download/v0.34/hugo_0.34_Linux
 # dotnet
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install aspnetcore-runtime-2.1
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install aspnetcore-runtime-2.1
 
 # nvm
 npm install -g n
 
 # dev tools
-pip3 install awscli
+sudo apt install awscli
 go get -u github.com/remind101/assume-role
 go get -u github.com/golang/dep/cmd/dep
 go get -u github.com/jmespath/go-jmespath
@@ -50,13 +50,7 @@ sudo apt update && sudo apt install -y google-cloud-sdk
 sudo dpkg-reconfigure tzdata
 
 # visual studio code
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install code
+sudo apt install code
 
 # git configs
 git config --global url."git@gitlab.com:".insteadOf "https://gitlab.com/"
@@ -64,6 +58,4 @@ git config --global url."git@github.com:".insteadOf "https://github.com/"
 git config --global url."git@bitbucket.org:".insteadOf "https://bitbucket.org/"
 
 # DBeaver
-sudo add-apt-repository ppa:serge-rider/dbeaver-ce
-sudo apt-get update
-sudo apt-get install dbeaver-ce
+sudo apt install dbeaver-ce
