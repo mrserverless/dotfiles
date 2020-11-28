@@ -1,0 +1,9 @@
+[user]
+        name = Yun Zhi Lin
+        email = yun@yunspace.com
+[url "git@github.com:"]
+        insteadOf = https://github.com/
+[url "git@bitbucket.org:"]
+        insteadOf = https://bitbucket.org/
+[url "git@gitlab.com:"]
+        insteadOf = https://gitlab.com/
