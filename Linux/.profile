@@ -17,6 +17,15 @@
 #    fi
 #fi
 
-export GOPATH=$HOME/go
-# set PATH so it includes user's private bin directories
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/go/bin:$GOPATH/bin:$PATH
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's .local private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+GOPATH=$HOME/go
+PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
