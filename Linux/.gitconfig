@@ -1,3 +1,6 @@
+[core]
+        filemode = false
+        autocrlf = true
 [user]
         name = Yun Zhi Lin
         email = yun@yunspace.com

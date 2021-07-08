@@ -5,11 +5,8 @@ sudo apt -y upgrade
 sudo apt -y install ca-certificates build-essential libssl-dev zip make dos2unix curl jq apt-transport-https software-properties-common gnupg2 vim ssh-askpass
 
 # programming languages
-sudo apt -y -o install python3 python3-pip openjdk-15-jdk ruby ruby-dev
+sudo apt -y -o install python3 python3-pip openjdk-16-jdk ruby ruby-dev
 sudo apt -y -o install node-gyp
-
-# containers
-sudo apt -y install podman
 
 # go
 curl -L https://storage.googleapis.com/golang/go1.15.6.linux-amd64.tar.gz | sudo tar xz -C /usr/local/
